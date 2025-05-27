@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'sass:math';
+@use 'material-symbols';
+@font-face {
+    font-family: 'Exo2';
+    src: url('assets/fonts/Exo_2/Exo2-VariableFont_wght.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'Exo2-Italic';
+    src: url('assets/fonts/Exo_2/Exo2-Italic-VariableFont_wght.ttf') format('truetype')
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Cooper_Hewitt';
+    font-style: normal;
+    font-weight: 100;
+    src: url('assets/fonts/Cooper_Hewitt/Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'CP_Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('assets/fonts/Cooper_Hewitt/Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'CP_Book';
+    font-style: normal;
+    font-weight: 350;
+    src: url('assets/fonts/Cooper_Hewitt/Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'CP_Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url('assets/fonts/Cooper_Hewitt/Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'CP_Semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/fonts/Cooper_Hewitt/Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'CP_Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/Cooper_Hewitt/Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'CP_Heavy';
+    font-style: normal;
+    font-weight: 900;
+    src: url('assets/fonts/Cooper_Hewitt/Heavy.ttf') format('truetype');
+}
+
+$main-color: #01161E;
+$second-color: #E5EAED;
+$third-color: #2C9096;
+
+$base-font-size: 16;
+
+@function px-to-rem($px) {
+    @return math.div($px, $base-font-size) *1rem;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $main-color;
+}
+
+.material-symbols {
+    color: $second-color;
+    font-family: 'Material Symbols Rounded';
+    font-size: px-to-rem(48);
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+    color: $second-color;
+    margin: 0;
+}
+h1, .h1 {
+    font-size: px-to-rem(52);
+}
+h2, .h2 {
+    font-size: px-to-rem(38);
+}
+h3, .h3 {
+    font-size: px-to-rem(28);
+}
+h4, .h4 {
+    font-size: px-to-rem(20);
+    font-family: "CP_Medium";
+}
+h5, .h5 {
+    font-size: px-to-rem(17);
+    font-family: "CP_Medium";
+}
+
+.p1 {
+    font-size: px-to-rem(16);
+}
+.p2 {
+    font-size: px-to-rem(14);
+}
+.p3 {
+    font-size: px-to-rem(12);
+}
+
+li {
+    font-size: px-to-rem(16);
+}
+
+a {
+    color: $second-color;
+    font-family: 'Exo2-Italic';
+    font-size: px-to-rem(16);
+}
+.a2 {
+    color: $second-color;
+    font-family: 'Exo2-Italic';
+    font-size: px-to-rem(16);
+    text-decoration: none;
+}
+.a3 {
+    color: $second-color;
+    font-family: 'Cooper_Hewitt';
+    font-size: px-to-rem(32);
+    text-decoration: none;
+}

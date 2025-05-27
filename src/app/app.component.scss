@@ -1,0 +1,17 @@
+.grid-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); // 12 colunas
+    gap: 3%; // Espaçamento entre colunas
+    pointer-events: none; // Não interfere com cliques nos elementos abaixo
+    z-index: 9999; // Sempre acima do conteúdo
+}
+
+.grid-overlay div {
+    background-color: rgba(255, 0, 0, .0); // Vermelho transparente
+    height: 100%;
+}

@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { MatToolbarModule } from '@angular/material/toolbar';  // Para a Navbar
-import { MatButtonModule } from '@angular/material/button';    // Para botões
-import { MatIconModule } from '@angular/material/icon';        // Para ícones
+import { SharedModule } from './shared/shared.module'; // Importando o SharedModule
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -11,8 +10,7 @@ import { MatIconModule } from '@angular/material/icon';        // Para ícones
   ],
   imports: [
     BrowserModule,
-    MatToolbarModule,
-    MatButtonModule,
+    SharedModule, // Agora você pode usar os componentes do SharedModule em qualquer lugar
     MatIconModule
   ],
   providers: [],

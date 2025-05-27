@@ -1,0 +1,6 @@
+@use "sass:math"; // Importa a biblioteca de matemática do Sass
+
+@function px-to-rem($px, $base: 16) {
+  @return calc($px / $base) * 1rem; // apenas números, sem 'px' no input
+}
+
